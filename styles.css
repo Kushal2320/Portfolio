@@ -1,0 +1,434 @@
+/* ------------------------------
+   ROOT THEME
+------------------------------ */
+:root {
+  --bg: #0b0d12;
+  --bg-light: #10131c;
+  --card: #111424;
+  --muted: #9ea6b6;
+  --text: #d4d8e6;
+
+  --lavender: #9b76ff;
+  --lavender-soft: #c9b4ff;
+
+  --radius: 14px;
+  --glass-border: rgba(255, 255, 255, 0.05);
+
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+  padding: 28px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+
+/* ------------------------------
+   HEADER
+------------------------------ */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 25px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.logo {
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, var(--lavender), var(--lavender-soft));
+  color: #0b0d12;
+  font-weight: 800;
+  font-size: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Poppins, Inter;
+  box-shadow: 0 8px 24px rgba(144, 110, 255, 0.35);
+}
+
+/* PROFILE PHOTO STYLE */
+.photo-box {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid var(--lavender-soft);
+  box-shadow: 0 8px 24px rgba(144, 110, 255, 0.35);
+  flex-shrink: 0;
+}
+
+.photo-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.role {
+  color: var(--lavender-soft);
+  margin: 0;
+  font-size: 14px;
+}
+
+.top-nav a {
+  text-decoration: none;
+  color: var(--muted);
+  padding: 8px 12px;
+  border-radius: 10px;
+  transition: 0.25s ease;
+  font-size: 14px;
+}
+
+.top-nav a:hover {
+  background: rgba(155, 118, 255, 0.15);
+  color: var(--lavender-soft);
+}
+
+.btn-ghost {
+  border: 1px solid var(--glass-border);
+}
+
+
+/* ------------------------------
+   HERO SECTION
+------------------------------ */
+.hero {
+  display: flex;
+  gap: 40px;
+  padding: 30px 0;
+  flex-wrap: wrap;
+}
+
+.hero-left {
+  flex: 1;
+  min-width: 260px;
+}
+
+.hero-title {
+  font-family: Poppins, Inter;
+  font-size: 30px;
+  color: white;
+  margin-top: 0;
+}
+
+.hero-sub {
+  color: var(--muted);
+  max-width: 620px;
+}
+
+.hero-actions {
+  margin-top: 18px;
+  display: flex;
+  gap: 12px;
+}
+
+.btn-primary {
+  background: linear-gradient(90deg, var(--lavender), var(--lavender-soft));
+  padding: 10px 20px;
+  border-radius: 50px;
+  color: #000;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.25s ease;
+  box-shadow: 0 10px 30px rgba(131, 98, 255, 0.25);
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 40px rgba(131, 98, 255, 0.35);
+}
+
+.btn-outline {
+  padding: 10px 20px;
+  border-radius: 50px;
+  border: 1px solid var(--glass-border);
+  text-decoration: none;
+  color: var(--text);
+  transition: 0.25s ease;
+}
+
+.btn-outline:hover {
+  border-color: var(--lavender-soft);
+  color: var(--lavender-soft);
+}
+
+
+/* RIGHT RESUME CARD */
+.resume-card {
+  background: var(--card);
+  padding: 24px;
+  border-radius: 16px;
+  border: 1px solid var(--glass-border);
+  width: 340px;
+  transition: 0.25s ease;
+}
+
+.resume-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(137, 107, 255, 0.18);
+}
+
+.resume-card h3 {
+  margin-top: 0;
+  color: var(--lavender-soft);
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 12px 0;
+}
+
+.skills span {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 6px 10px;
+  border-radius: 10px;
+  font-size: 13px;
+}
+
+.btn-small {
+  display: inline-block;
+  margin-top: 10px;
+  color: var(--lavender-soft);
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.25s ease;
+}
+
+.btn-small:hover {
+  opacity: 0.7;
+}
+
+
+/* ------------------------------
+   SECTION
+------------------------------ */
+.section {
+  padding: 50px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.section h2 {
+  font-family: Poppins;
+  color: white;
+  margin-bottom: 18px;
+}
+
+
+/* ------------------------------
+   PROJECT GRID
+------------------------------ */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.project {
+  background: var(--card);
+  padding: 20px;
+  border-radius: var(--radius);
+  border: 1px solid var(--glass-border);
+  transition: 0.3s ease;
+}
+
+.project:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 45px rgba(151, 112, 255, 0.22);
+}
+
+.project h3 {
+  margin-top: 0;
+}
+
+.muted {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.btn-link {
+  margin-top: 12px;
+  background: none;
+  border: 0;
+  color: var(--lavender-soft);
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+  transition: 0.25s;
+}
+
+.btn-link:hover {
+  opacity: 0.7;
+}
+
+
+/* ------------------------------
+   EXPERIENCE TIMELINE
+------------------------------ */
+.timeline-item {
+  background: var(--card);
+  padding: 20px;
+  border-radius: var(--radius);
+  border: 1px solid var(--glass-border);
+  margin-bottom: 20px;
+  transition: 0.25s ease;
+}
+
+.timeline-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(141, 101, 255, 0.18);
+}
+
+
+/* ------------------------------
+   TWO COLUMN LAYOUT
+------------------------------ */
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+
+/* ------------------------------
+   CONTACT SECTION
+------------------------------ */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 26px;
+}
+
+.card {
+  background: var(--card);
+  padding: 22px;
+  border-radius: var(--radius);
+  border: 1px solid var(--glass-border);
+  transition: 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(141, 101, 255, 0.18);
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid var(--glass-border);
+  background: #0c0f19;
+  color: var(--text);
+  margin-top: 6px;
+}
+
+.contact-form button {
+  margin-top: 10px;
+}
+
+
+/* ------------------------------
+   MODAL
+------------------------------ */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 200;
+}
+
+.modal.open {
+  display: flex;
+  animation: fadeIn 0.35s ease;
+}
+
+.modal-inner {
+  background: var(--card);
+  padding: 26px;
+  border-radius: 16px;
+  border: 1px solid var(--glass-border);
+  width: 420px;
+  position: relative;
+  animation: popIn 0.4s ease;
+}
+
+.modal-close {
+  position: absolute;
+  right: 14px;
+  top: 8px;
+  background: none;
+  border: 0;
+  font-size: 30px;
+  color: var(--muted);
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.modal-close:hover {
+  color: var(--lavender-soft);
+}
+
+
+/* ------------------------------
+   FOOTER
+------------------------------ */
+.site-footer {
+  text-align: center;
+  padding: 40px 0;
+  color: var(--muted);
+}
+
+
+/* ------------------------------
+   ANIMATIONS
+------------------------------ */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes popIn {
+  from { transform: scale(0.85); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+
+/* ------------------------------
+   RESPONSIVE
+------------------------------ */
+@media (max-width: 880px) {
+  .top-nav {
+    display: none;
+  }
+
+  .two-col,
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
